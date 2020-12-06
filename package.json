@@ -4,12 +4,22 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app",
+    "devstart": "nodemon main",
+    "initdev": "npm run migrate && npm run seed",
+    "migrate": "npx sequelize-cli db:migrate",
+    "demigrate": "npx sequelize-cli db:migrate:undo:all",
+    "seed": "npx sequelize-cli db:seed:all",
+    "migration": "npx sequelize-cli migration:generate --name",
+    "newseed": "npx sequelize-cli seed:generate --name",
+    "resetDB": "npx sequelize-cli db:migrate:undo:all && npm run initdev"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^5.0.0",
     "bcryptjs": "^2.4.3",
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",

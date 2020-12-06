@@ -20,7 +20,7 @@
 - email : string
 - password : string
 - name : string
-- isAdmin: boolean
+- userType: string
 - address: string (street Name, [LATER: city, country postalcode])
 - phone: integer
 - [id] : integer
@@ -29,9 +29,15 @@
 
 - name string
 - price: float
-- category : string
+- categoryId: string
 - available: boolean
 - [id] : integer
+
+3. Categories
+
+- name: string
+- description: string
+- imageUrl: string
 
 3. Cart/order (a list of products the customer has selected to purchase)
 
@@ -48,36 +54,23 @@ Endpoints for to handle different types of requests / types of data.
 Users / Customers which interact with the site (unregistered & registered)
 
 Tasks
-Find and retrieve fake products data (or make the data yourself)
-Setup express API
-Setup Database
-Configure & test Database connection details
-Create Models with attributes:
-Users:
-email : string
-password : string
-name : string
-[id] : integer
-Products: (availability can be set to true / false )
-name string
-price: float
-category : string
-available: boolean
-[id] : integer
-Cart (a list of products the customer has selected to purchase)
-productId (every Row with a different product)
-userId (user has the product in his cart)
-Do Migration files
-Create Seeders for all tables
-Test Database relations & table shapes with queries
 
-Setup Express API
-Create Basic server
-Create Routes for
-users,
-products,
-customer cart ( can only exist if user is registered)
-create endpoints in routes to match User stories.
+- Find and retrieve fake products data (or make the data yourself)
+- Setup express API
+- Setup Database
+- Configure & test Database connection details
+- Create Models with attributes:
+- Do Migration files
+- Create Seeders for all tables
+- Test Database relations & table shapes with queries
+
+- Setup Express API
+- Create Basic server
+- Create Routes for
+- users,
+- products,
+- orders ( can only exist if user is registered)
+- create endpoints in routes to match User stories.
 
 User Stories to Implement later
 as an admin I want to be able to add new products
