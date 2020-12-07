@@ -8,13 +8,15 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // order.belongsToMany(models.product)
+      // No associations are necessary...?
+      // what about quantity ? as it's linked to product
     }
   }
   order.init(
     {
       productId: DataTypes.INTEGER,
       userId: DataTypes.INTEGER,
+      quantity: DataTypes.INTEGER,
     },
     {
       sequelize,

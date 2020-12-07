@@ -43,6 +43,7 @@
 
 - productId (every Row with a different product)
 - userId (user has the product in his cart)
+- quantity
 
 Things common to all User Stories:
 Database which Stores:

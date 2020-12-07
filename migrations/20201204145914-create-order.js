@@ -23,6 +23,9 @@ module.exports = {
           model: "users",
           key: "id",
         },
+        quantity: {
+          type: Sequelize.INTEGER,
+        },
         onUpdate: "CASCADE",
         onDelete: "SET NULL",
       },
